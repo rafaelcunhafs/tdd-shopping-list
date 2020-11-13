@@ -1,12 +1,11 @@
 import React from "react";
 import './App.css';
-import Counter from "./Counter";
+import TDDShoppingList from "./components/TDDShoppingList";
 
 function App() {
-
   return (
-    <div className="App">
-      <Counter />
+    <div id="tdd-app">
+      <TDDShoppingList />
     </div>
   );
 }

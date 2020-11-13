@@ -1,1 +1,1 @@
-# tdd-buy-list
+# tdd-shopping-list
