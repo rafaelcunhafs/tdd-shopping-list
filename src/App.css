@@ -12,6 +12,7 @@ body {
     rgba(48, 16, 255, 1) 0%,
     rgba(100, 115, 255, 1) 100%
   );
+  background-attachment: fixed;
 }
 #tdd-app {
   display: flex;

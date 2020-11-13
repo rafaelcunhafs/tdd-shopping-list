@@ -20,22 +20,16 @@ describe("Shopping List Testing", () => {
     expect(wrapper.find("#tdd-input").text()).toBe("");
   });
 
-  test("if input has no text don't create item", () => {
-    wrapper.find("#tdd-input").simulate("change", { target: { value: '' } });
-    wrapper.find("#tdd-btn").simulate("click");
-    expect(wrapper.find('.tdd-item-row')).toHaveLength(0);
-  });
-
   test("clear input after click button", () => {
     wrapper.find("#tdd-input").simulate("change", { target: { value: 'Biscoito' } });
     wrapper.find("#tdd-btn").simulate("click");
     expect(wrapper.find("#tdd-input").text()).toBe("");
   });
 
-  test("created item must contain the same text typed", () => {
-    wrapper.find("#tdd-input").simulate("change", { target: { value: 'Biscoito' } });
+  test("if input has no text don't create item", () => {
+    wrapper.find("#tdd-input").simulate("change", { target: { value: '' } });
     wrapper.find("#tdd-btn").simulate("click");
-    expect(wrapper.find('.tdd-item-row').text()).toBe('Biscoito');
+    expect(wrapper.find('.tdd-item-row')).toHaveLength(0);
   });
 
   test("create one item on list", () => {
@@ -44,12 +38,27 @@ describe("Shopping List Testing", () => {
     expect(wrapper.find('.tdd-item-row')).toHaveLength(1);
   });
 
+  test("created item must contain the same text typed", () => {
+    wrapper.find("#tdd-input").simulate("change", { target: { value: 'Biscoito' } });
+    wrapper.find("#tdd-btn").simulate("click");
+    expect(wrapper.find('.tdd-item-row').text()).toBe('Biscoito');
+  });
+
   test("creating two items on list", () => {
     wrapper.find("#tdd-input").simulate("change", { target: { value: 'Biscoito' } });
     wrapper.find("#tdd-btn").simulate("click");
     wrapper.find("#tdd-input").simulate("change", { target: { value: 'Leite' } });
     wrapper.find("#tdd-btn").simulate("click");
     expect(wrapper.find('.tdd-item-row')).toHaveLength(2);
+  });
+
+  test("creating two items on list and each one has different text", () => {
+    wrapper.find("#tdd-input").simulate("change", { target: { value: 'Biscoito' } });
+    wrapper.find("#tdd-btn").simulate("click");
+    wrapper.find("#tdd-input").simulate("change", { target: { value: 'Leite' } });
+    wrapper.find("#tdd-btn").simulate("click");
+    expect(wrapper.find('.tdd-item-row').first().text()).toBe('Leite');
+    expect(wrapper.find('.tdd-item-row').last().text()).toBe('Biscoito');
   });
 
   test("purchased item must disappear buy button", () => {
