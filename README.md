@@ -8,8 +8,8 @@ Shopping List is an application to create a list of things that will be purchase
 
 ## Why?
 
-This project is an activity of the class "Fundamentos de Teste de Software" (PUC Minas - Sistemas de Informação) for the development of a project using TDD that consists of testing before developing.
-I chose React because I want to learn how to develop applications with this framework. And for the tests I used the Jest and Enzyme frameworks that fit well with the proposed test method.
+This project is an activity of the class "Fundamentos de Teste de Software" (PUC Minas - Sistemas de Informação) for the development of a project using TDD, that consists of testing before developing.
+I chose React because I want to learn how to develop applications with this framework and for the tests I used the Jest and Enzyme frameworks that fit well with the proposed test method.
 
 ## Features included
 - Create list item
