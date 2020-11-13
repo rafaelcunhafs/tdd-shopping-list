@@ -1,6 +1,6 @@
 # Shopping List
 
-![Preview-Screen](https://github.com/com/RafaelCunhafs/tdd-shopping-list/blob/main/Preview.png)
+![Preview-Screen](https://github.com/RafaelCunhafs/tdd-shopping-list/blob/main/Preview.png)
 
 ## About this Project
 
