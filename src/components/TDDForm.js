@@ -36,6 +36,7 @@ function TDDForm(props) {
                         value={input}
                         name='text'
                         ref={inputRef}
+                        autoComplete="off"
                         onChange={handleChange}
                     />
                     <button onClick={handleSubmit} className="tdd-btn edit">Editar</button>
@@ -48,6 +49,7 @@ function TDDForm(props) {
                         value={input}
                         name='text'
                         ref={inputRef}
+                        autoComplete="off"
                         onChange={handleChange}
                     />
                     <button onClick={handleSubmit} className="tdd-btn">Comprar</button>
