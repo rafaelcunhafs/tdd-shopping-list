@@ -24,13 +24,31 @@ function TDDShoppingList() {
         setItems(updateItems);
     };
 
+    const removeItem = id => {
+        const removeArr = [...items].filter(item => item.id !== id);
+        setItems(removeArr);
+    };
+
+    const updateItem = (itemId, newValue) => {
+        if (!newValue.text || /^\s*$/.test(newValue.text)) {
+          return;
+        }
+    
+        setItems(prev => prev.map(item => (item.id === itemId ? newValue : item)));
+    };
+
     return (
         <div>
             <h1>Lista de compras</h1>
             <TDDForm onSubmit={addItem} />
-            <TDDItems items={items} completeItem={completeItem} />
+            <TDDItems
+                items={items}
+                completeItem={completeItem}
+                removeItem={removeItem}
+                updateItem={updateItem}
+            />
         </div>
     );
 }
-  
+
 export default TDDShoppingList;

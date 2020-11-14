@@ -41,12 +41,15 @@ h1 {
 .complete .tdd-icons .tdd-buy {
   display: none;
 }
+.complete .tdd-icons .tdd-edit {
+  display: none;
+}
 
-#tdd-form {
+.tdd-form {
   margin-bottom: 32px;
 }
 
-#tdd-input {
+.tdd-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
   border: 2px solid #5d0cff;
@@ -56,11 +59,11 @@ h1 {
   color: #fff;
 }
 
-#tdd-input::placeholder {
+.tdd-input::placeholder {
   color: #e2e2e2;
 }
 
-#tdd-btn {
+.tdd-btn {
   padding: 16px;
   border: none;
   border-radius: 0 4px 4px 0;
@@ -73,6 +76,19 @@ h1 {
   );
   color: #fff;
   text-transform: capitalize;
+}
+
+.tdd-input.edit {
+  border: 2px solid #149fff;
+}
+
+.tdd-btn.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
 }
 
 .tdd-item-row {
@@ -121,6 +137,10 @@ h1 {
   align-items: center;
   font-size: 24px;
   cursor: pointer;
+}
+
+.tdd-edit {
+  margin-right: 10px;
 }
 
 .tdd-buy {

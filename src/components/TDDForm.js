@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 function TDDForm(props) {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
     const inputRef = useRef(null);
 
@@ -25,16 +25,34 @@ function TDDForm(props) {
     };
 
     return (
-        <form id="tdd-form" onSubmit={handleSubmit}>
-            <input
-                type='text'
-                id='tdd-input'
-                placeholder='O que compraremos hoje?'
-                value={input}
-                name='text'
-                ref={inputRef}
-                onChange={handleChange} />
-            <button onClick={handleSubmit} id="tdd-btn">Comprar</button>
+        <form className="tdd-form" onSubmit={handleSubmit}>
+            {
+                props.edit ?
+                (<>
+                    <input
+                        type='text'
+                        className='tdd-input edit'
+                        placeholder='Errou na lista?'
+                        value={input}
+                        name='text'
+                        ref={inputRef}
+                        onChange={handleChange}
+                    />
+                    <button onClick={handleSubmit} className="tdd-btn edit">Editar</button>
+                </>) :
+                (<>
+                    <input
+                        type='text'
+                        className='tdd-input'
+                        placeholder='O que compraremos hoje?'
+                        value={input}
+                        name='text'
+                        ref={inputRef}
+                        onChange={handleChange}
+                    />
+                    <button onClick={handleSubmit} className="tdd-btn">Comprar</button>
+                </>)
+            }
         </form>
     );
 }

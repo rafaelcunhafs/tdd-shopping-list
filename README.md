@@ -11,9 +11,15 @@ Shopping List is an application to create a list of things that will be purchase
 This project is an activity of the class "Fundamentos de Teste de Software" (PUC Minas - Sistemas de Informação) for the development of a project using TDD, that consists of testing before developing.
 I chose React because I want to learn how to develop applications with this framework and for the tests I used the Jest and Enzyme frameworks that fit well with the proposed test method.
 
+## Guide
+
+This project was made following [this](https://www.youtube.com/watch?v=E1E08i2UJGI) tutorial for develop the list and [this](https://www.youtube.com/watch?v=bmdf1oATQo)  for develop using TDD.
+
 ## Features included
 - Create list item
 - Confirm which item was purchased
+- Edit item in list
+- Remove item from list
 
 ## Getting Started
 
@@ -51,7 +57,7 @@ $ npm start
 
 ## Technologies used
 - [React-Native](https://facebook.github.io/react-native/) - JavaScript and React
-- [React Icons](https://react-icons.github.io/react-icons/) - React Icons
-- [Node](https://nodejs.org/) - Node
-- [Jest](https://jestjs.io/) - Jest
-- [Enzyme](https://github.com/enzymejs/enzyme) - Enzyme
+- [React Icons](https://react-icons.github.io/react-icons/) - Icons
+- [Node](https://nodejs.org/) - Node and Npm
+- [Jest](https://jestjs.io/) - Testing Framework
+- [Enzyme](https://github.com/enzymejs/enzyme) - Testing utility for React Components
