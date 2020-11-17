@@ -13,7 +13,7 @@ I chose React because I want to learn how to develop applications with this fram
 
 ## Guide
 
-This project was made following [this](https://www.youtube.com/watch?v=E1E08i2UJGI) tutorial for develop the list and [this](https://www.youtube.com/watch?v=bmdf1oATQo)  for develop using TDD.
+This project was made following [this](https://www.youtube.com/watch?v=E1E08i2UJGI) tutorial for develop the list and [this](https://www.youtube.com/watch?v=-bmdf1oATQo)  for develop using TDD.
 
 ## Features included
 - Create list item
